@@ -2,7 +2,7 @@ import cors from 'cors'
 import express from 'express'
 import morgan, { token } from 'morgan'
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 const app = express();
 
 app.use(cors());
