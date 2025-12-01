@@ -1,4 +1,7 @@
-DELETE http://localhost:3001/api/persons/2 HTTP/1.1
+DELETE http://localhost:3001/api/persons/692befdbe48251bcef78e6ac HTTP/1.1
+
+###
+GET http://localhost:3001/info HTTP/1.1
 
 ###
 GET http://localhost:3001/api/persons/ HTTP/1.1
@@ -8,8 +11,8 @@ POST http://localhost:3001/api/persons/ HTTP/1.1
 Content-Type: application/json
 
 { 
-    "name": "John Doe", 
-    "phone": "234-908-423143"
+    "name": "April Abramov", 
+    "phone": "12-43234345"
 }
 
 ###
@@ -17,6 +20,15 @@ POST http://localhost:3001/api/persons/ HTTP/1.1
 Content-Type: application/json
 
 { 
-    "name": "Ada Lovelace", 
-    "phone": "234-908-423143"
+    "name": "   John     doe     ", 
+    "phone": "32-126666"
+}
+
+###
+PUT http://localhost:3001/api/persons/692cb54a52b772fc97ea10cd HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "April Abramov", 
+    "phone": "33-898989898"
 }
