@@ -10,7 +10,7 @@
     "start": "node main.js",
     "dev": "node --watch main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf dist && cd ../../part2/phonebook &&  npm run build && cp -r dist ../server",
+    "build:ui": "rm -rf dist && cd ../../part2/phonebook &&  npm run build && cp -r dist ../../part3/server",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "lint": "eslint ."
   },
