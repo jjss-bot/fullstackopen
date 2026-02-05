@@ -1,0 +1,52 @@
+###
+GET http://localhost:3001/api/users  HTTP/1.1
+
+###
+POST http://localhost:3001/api/users  HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "root",
+  "name": "John Doe",
+  "password": "secret"
+}
+
+###
+POST http://localhost:3001/api/login  HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "root",
+  "password": "secret"
+}
+
+###
+GET http://localhost:3001/api/blogs  HTTP/1.1
+
+###
+POST http://localhost:3001/api/blogs  HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODJlMjc4NmRlMGRmZWRhNzVhNWI3MSIsInVzZXJuYW1lIjoicm9vdCIsImlhdCI6MTc3MDE4NjE0NiwiZXhwIjoxNzcwMTg2MjA2fQ.hvFEM8BeY_w2DwxzvmKGlUWuOcJ1HPkIR4W80z0FPcY
+
+{
+  "title": "What is RCU, Fundamentally?",
+  "author": "Paul McKenney",
+  "url": "https://lwn.net/Articles/262464/",
+  "likes": 20
+}
+
+###
+POST http://localhost:3001/api/blogs  HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODJlMjc4NmRlMGRmZWRhNzVhNWI3MSIsInVzZXJuYW1lIjoicm9vdCIsImlhdCI6MTc3MDE4NjE0NiwiZXhwIjoxNzcwMTg2MjA2fQ.hvFEM8BeY_w2DwxzvmKGlUWuOcJ1HPkIR4W80z0FPcY
+
+{
+  "title": "An Introduction to Lock-Free Programming",
+  "author": "Jeff Preshing",
+  "url": "https://preshing.com/20120612/an-introduction-to-lock-free-programming/",
+  "likes": 4
+}
+
+###
+DELETE http://localhost:3001/api/blogs/6982e2b36de0dfeda75a5b7b HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODJlMjc4NmRlMGRmZWRhNzVhNWI3MSIsInVzZXJuYW1lIjoicm9vdCIsImlhdCI6MTc3MDE4NTM1NH0.Zd4aKmBTuR7W5W5wwxRhrJ7y04DHZQTJhPMLhvg5cio
