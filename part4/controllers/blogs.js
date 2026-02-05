@@ -53,6 +53,7 @@ blogRouter.delete('/:id', middleware.userExtractor, async (request, response) =>
       });
 
       await blog.deleteOne();
+      await user.save();
     } else {
       return response.status(403).end();
     }
